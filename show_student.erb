@@ -1,0 +1,9 @@
+<h2> <b>Student</b> <%=@student.firstname%> <%=@student.lastname%> </h2>
+<p> <b>Birthday</b> <%=@student.birthday.strftime("%e %B %Y") if @student.birthday%> </p>
+<p> <b>Address</b> <%=@student.address%> </p>
+<p> <b>Student ID</b> <%=@student.studentid%> </p>
+<p> <a href="/students">Go to Student Page</a> </p>
+<p> <a href="/students/<%=@student.id%>/edit">Modify this Student's Data</a> </p>
+<form action="/students/<%=@student.id%>" method="POST">
+  <input type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="Delete the Student Record">

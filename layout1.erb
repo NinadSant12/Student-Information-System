@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en"> 
+  <head>
+    <title>
+    <%= @title || "Student Information System"%>
+    </title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <header>
+      <h1><b> Student Information System </b> </h1>
+      <%=erb :nav1%>
+      <%= yield%>
+    </header>
+  </body>
+</html>
+

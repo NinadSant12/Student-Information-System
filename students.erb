@@ -1,0 +1,18 @@
+<h2 ><b>Students</b> </h2>
+<h3 ><b><a href="/students/new">Add a new Student</a></b></h3>
+<br>
+<br>
+<h3 ><b>Data about Stored Students</b></h3>
+<%if @students.any?%>
+  <ul>
+    <%@students.each do |student|%>
+       <a href="/students/<%=student.id%>"><%=student.firstname%> <%=student.lastname%></a> 
+      <br>
+      <br>
+    <%end%>
+  </ul>
+<%else%>
+  <p> Student Data has not been added yet </p>
+<%end%>
+
+

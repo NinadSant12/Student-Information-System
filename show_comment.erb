@@ -1,0 +1,9 @@
+<h2> Comment: <%=@comment.comment%> </h2>
+<p> <b>Name:</b> <%=@comment.name%> </p>
+<p> <b>Added At:</b> <%=@comment.created_at%> </p>
+<p> <b>Modified At:</b> <%=@comment.updated_at%> </p>
+<p> <a href="/comments">Go to Comments Page</a> </p>
+<p> <a href="/comments/<%=@comment.cid%>/edit">Modify Comment</a> </p>
+<form action="/comments/<%=@comment.cid%>" method="POST">
+  <input type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="Delete the Comment">
